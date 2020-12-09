@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class zadacha5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);// // brackpoint sa червните точки между тях се прави дебъгинга
+
+        int num1 = Integer.parseInt(scanner.nextLine());
+        if(num1 % 2 ==0) {
+            System.out.print("even");
+        } else {
+            System.out.print("odd");
+        }
+    }
+}
