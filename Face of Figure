@@ -1,0 +1,28 @@
+public class Task6 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String figureType = scanner.nextLine();
+        double a = Double.parseDouble(scanner.nextLine());
+        double area = 0.0;
+
+
+        if (figureType.equals("square")){
+            area = a * a;
+
+        } else if (figureType.equals("rectangle")){
+            double b = Double.parseDouble(scanner.nextLine());
+            area = a * b;
+
+        } else if (figureType.equals("circle")){
+            area = a * a * Math.PI;
+
+        } else {
+            double h = Double.parseDouble(scanner.nextLine());
+            area = a * h/2;
+
+            System.out.printf("%.3", area);
+        }
+    }
+}
