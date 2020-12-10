@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class sravnqwanNaTeks {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // стригове се сравняват с командата equals => System.ou.println(a.equals(b));
+        // прости проверки if (){
+        // код за изпълнение}
+
+        int ocenka = Integer.parseInt(scanner.nextLine());
+        if (ocenka >= 5){
+            System.out. println("Excellent");
+        }
+
+    }
+}
