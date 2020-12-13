@@ -1,0 +1,45 @@
+public class zad7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        double puzzel = 2.6;
+        double talkingDoll = 3;
+        double teddyBear = 4.1;
+        double minion = 8.2;
+        double truck = 2;
+
+        double costOfTrip = Double.parseDouble( scanner.nextLine() );
+        double numberOfPuzzels = Double.parseDouble( scanner.nextLine() );
+        double numberOfTalkingDoll = Double.parseDouble( scanner.nextLine() );
+        double numberOfTeddyBear = Double.parseDouble( scanner.nextLine() );
+        double numberOfMinion = Double.parseDouble( scanner.nextLine() );
+        double numberOfTruck = Double.parseDouble( scanner.nextLine() );
+
+        double sum = (puzzel * numberOfPuzzels) + (talkingDoll * numberOfTalkingDoll) + (teddyBear * numberOfTeddyBear) +
+                +(minion * numberOfMinion) + (truck* numberOfTruck);
+        double allToys = numberOfPuzzels + numberOfTalkingDoll + numberOfTeddyBear + numberOfMinion + numberOfTruck;
+
+        System.out.println( sum );
+        System.out.println( allToys );
+
+        if (allToys > 50) {
+            System.out.println( "25% costReduction " );
+            double costReduction = sum * 0.25;
+            double endCost = sum - costReduction;
+            double rent = endCost * 0.1;
+            double profit = endCost - rent;
+            if (profit > costoftrip) {
+                double rest = profit - costOfTrip;
+                System.out.println( trip );
+            }
+        } else if (allToys < 50) {
+            System.out.println( "No cost Reduction" );
+            double naem = sum * 0.1;
+            double profit = sum - rent;
+            if (profit < costOfTrip) {
+                double rest = costOfTrip - profit;
+                System.out.printf( "%f not enought", rest );
+            }
+        }
+    }
+}
