@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class zad8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int first = Integer.parseInt(scanner.nextLine());
+        int second = Integer.parseInt(scanner.nextLine());
+        int third = Integer.parseInt(scanner.nextLine());
+
+        int timetotal = first + second + third;
+        int minutes = timetotal / 60;
+        int secononds = timetotal % 60;
+
+        if (second < 10){
+            System.out.printf("%d:0%d", minutes, second);
+        } else {
+            System.out.printf("%d:%d", minutes, second);
+        }
+    }
+}
