@@ -1,0 +1,37 @@
+public class zad11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int input = Integer.parseInt(scanner.nextLine());
+        String unitOfMeasurement1 = scanner.nextLine();
+        String unitOfMeasurement2 = scanner.nextLine();
+        //1 meter (m)	1000 millimeters (mm)
+        //1 meter (m)	100 centimeters (cm)
+        double number = 0;
+
+        if (unitOfMeasurement1.equals("mm")){
+            number = input/100;
+            System.out.printf("%.5f", number);
+        }else if (unitOfMeasurement1.equals("m")){
+            number = input;
+            System.out.printf("%.5f", number);
+        }else if (unitOfMeasurement1.equals("cm")) {
+            number = input/100;
+            System.out.printf("%.5f", number);
+        }
+        if (unitOfMeasurement2.equals("mm")){
+            number = input*100;
+            System.out.printf("%.5f", number);
+        }else if (unitOfMeasurement2.equals("m")){
+            number = input;
+            System.out.printf("%.5f", number);
+        }else if (unitOfMeasurement2.equals("cm")) {
+            number = input*100;
+            System.out.printf("%.5f", number);
+        }
+
+
+
+        }
+        
+    }
