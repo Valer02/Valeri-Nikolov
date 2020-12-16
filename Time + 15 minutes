@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class zad13 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int hour = Integer.parseInt(scanner.nextLine());
+        int minutes = Integer.parseInt(scanner.nextLine());
+        int sumOfMinutes = (hour * 60) + minutes + 15;
+
+        int hour1 = sumOfMinutes / 60;
+        int minutes1 = sumOfMinutes % 60;
+
+        if (hour >= 23) {
+            hour1 = 0;
+        }
+        if (minutes1 < 10) {
+            System.out.printf("%d:0%d", hour1, minutes1);
+        } else {
+            System.out.printf("%d:%d", hour1, minutes1);
+        }
+    }
+}
