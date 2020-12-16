@@ -1,0 +1,26 @@
+public class zad14 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        double budget = Double.parseDouble( scanner.nextLine() );
+        double numberOfPeople = Double.parseDouble( scanner.nextLine() );
+        double costForclothesForOnePeople = Double.parseDouble( scanner.nextLine() );
+        double movieBackground = budget * 0.1;
+        double totalCostForclothesForOnePeople = costForclothesForOnePeople * numberOfPeople;
+        double totalCostForMovie = budget + totalCostForclothesForOnePeople;
+        double moneyRest = budget - totalCostForMovie;
+
+        if (numberOfPeople > 150) {
+            totalCostForMovie = budget + costForclothesForOnePeople - movieBackground;
+        } else {
+            totalCostForMovie = totalCostForMovie;
+        }
+
+        if (totalCostForMovie <= budget) {
+            System.out.printf( "Not enough money!", moneyRest );
+        } else {
+            System.out.printf( "action", moneyRest );
+        }
+    }
+
+}
