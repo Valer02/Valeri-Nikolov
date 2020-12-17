@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class zad15 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        double recordInSeconds = Double.parseDouble( scanner.nextLine() );
+        double distanceInMeters = Double.parseDouble( scanner.nextLine() );
+        double timeInSecondsForMeter = Double.parseDouble( scanner.nextLine() );
+        double waterResistance = (distanceInMeters / 15) * 12.5;
+        double haveToSwim = distanceInMeters * timeInSecondsForMeter;
+        double totalTime = haveToSwim + waterResistance;
+
+        if (recordInSeconds <= totalTime) {
+            double notEnough = totalTime - recordInSeconds;
+            System.out.printf( "No, he failed! He was %.2f seconds slower.", notEnough );
+        } else if (totalTime <= recordInSeconds) {
+            double notEnough = recordInSeconds;
+            System.out.printf( "Yes! He was %.2f seconds faster.", notEnough );
+
+        }
+
+    }
+
+}
