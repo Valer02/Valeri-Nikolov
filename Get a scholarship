@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class zad16 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        double income = Double.parseDouble(scanner.nextLine());
+        double success = Double.parseDouble(scanner.nextLine());
+        double minSalary = Double.parseDouble(scanner.nextLine());
+        double scholarship = success * 1.25;
+        double socialScholarship = 0.35 * minSalary;
+
+        if (success >= 5.5 & income < minSalary & socialScholarship >= scholarship) {
+            System.out.printf("You get a Social scholarship %.0f BGN", Math.floor(socialScholarship));
+        }  else if (success >= 5.5 & income < minSalary & socialScholarship < scholarship) {
+            System.out.printf("You get a scholarship for excellent results %.0f BGN", Math.floor(scholarship));
+        }  else if (success > 4.5 & income < minSalary) {
+            System.out.printf("You get a Social scholarship %.0f BGN", Math.floor(socialScholarship));
+        }  else if (success >= 5.5){
+            System.out.printf("You get a scholarship for excellent results %.0f BGN", Math.floor(scholarship));
+        } else {
+            System.out.println("You cannot get a scholarship!");
+        }
+    }
+}
