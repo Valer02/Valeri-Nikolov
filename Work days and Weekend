@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class zad2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        String day = scanner.nextLine();
+
+        switch (day) {
+            case "monday":
+            case "tuesday":
+            case "wednesday":
+            case "thursday":
+            case "friday":
+
+                System.out.println( "Workday" );
+                break;
+
+            case "sunday":
+            case "saturday":
+                System.out.println( "weekend" );
+                break;
+            default:
+                System.out.println( "error" ); // само текст или цели числа
+
+        }
+
+    }
+}
