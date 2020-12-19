@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class zad3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        int age = Integer.parseInt( scanner.nextLine() );
+        String gander = scanner.nextLine();
+
+        if (age < 16) {
+            if ("f".equals( gander )) {
+                System.out.printf( "Miss. " ); 
+            } else if ("m".equals( gander )) {
+                System.out.printf( "Master " );
+            }
+
+        } else {
+            if ("f".equals( gander )) {
+                System.out.printf( "MS. " ); 
+            } else if ("m".equals( gander )) {
+                System.out.printf( "MR. " );
+            }
+
+
+        }
+    }
+}
+
