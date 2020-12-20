@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class zad6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        String day = scanner.nextLine();
+        int price = 0;
+
+        if (day.equals( "Monday" ) || day.equals( "Thursday" ) || day.equals( "Wednesday" )) {
+            price = 12;
+        } else if (day.equals( "Thursday" ) || day.equals( "Friday" )) {
+            price = 14;
+        } else if (day.equals( "Saturday" ) || day.equals( "Sunday" )) {
+            price = 16;
+
+        } else {
+            System.out.println( "error" );
+        }
+        System.out.println( price );
+
+    }
+}
