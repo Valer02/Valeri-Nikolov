@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class zad2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int hour = Integer.parseInt(scanner.nextLine());
+        String day = scanner.nextLine();
+
+        if (day.equals("Mon") || day.equals("tues") || day.equals("wed") || day.equals("thu") || day.equals("fri") && hour >10 && hour<18 ){
+            System.out.println("open");
+        } else {
+            System.out.println("closed");
+        }
+    }
+}
