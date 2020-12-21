@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class zad1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String animal = scanner.nextLine().toLowerCase();
+
+        switch (animal){
+            case "dog":
+                System.out.println("mammal");
+                break;
+            case "crocodile":
+            case "Turtle":
+            case "snake":
+                System.out.println("reptiles");
+                break;
+            default:
+                System.out.println("unknown");
+                break;
+
+        }
+
+
+    }
+}
