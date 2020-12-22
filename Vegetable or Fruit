@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class zad3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        String tupe = scanner.nextLine().toLowerCase();
+
+        if (tupe.equals( "tomato" ) || tupe.equals( "cucumber" ) || tupe.equals( "paper" ) || tupe.equals( "carrot" )) {
+            System.out.println( "vegetable" );
+        } else if (tupe.equals( "banana" ) || tupe.equals( "apple" ) || tupe.equals( "kiwi" ) || tupe.equals( "cherry" ) || tupe.equals( "lemon" ) || tupe.equals( "grapes" )) {
+            System.out.println( "fruit" );
+        } else {
+            System.out.println( "unknown" );
+        }
+    }
+
+}
