@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class zad7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String movieType = scanner.nextLine();
+        int rows = Integer.parseInt(scanner.nextLine());
+        int column = Integer.parseInt(scanner.nextLine());
+        double income = 0;
+
+        if (movieType.equals("Premier")){
+            income = rows * column * 12;
+        }else if (movieType.equals("Regular")){
+            income = rows * column* 7.5;
+        }else if (movieType.equals("Discount")){
+            income = rows * column * 5;
+        }
+        System.out.printf("%.2f", income, "BGN");
+        
+    }
+}
