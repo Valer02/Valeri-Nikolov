@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class zad8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int deg = Integer.parseInt(scanner.nextLine());
+        String daytime = scanner.nextLine();
+        String outfit = "";
+        String shoes = "";
+
+        if (daytime.equals("Morning")) {
+            if (deg <= 10 && deg <= 18) {
+                outfit = "Sweatshirt";
+                shoes = "Sneakers";
+            } else if ((deg < 18) && (deg <= 24)) {
+                outfit = "Shirt";
+                shoes = "Moccasins";
+            } else if (deg < 25) {
+                outfit = "T-shirt";
+                shoes = "Sandals";
+            }
+            System.out.println(deg + outfit + shoes);
+        }
+        if (daytime.equals("Afternoon")) {
+            if (deg <= 10 && deg <= 18) {
+                outfit = "Shirt";
+                shoes = "Moccasins";
+            } else if ((deg < 18) && (deg <= 24)) {
+                outfit = "T-Shirt";
+                shoes = "Sandals";
+            } else if (deg < 25) {
+                outfit = "Swim Suit";
+                shoes = "Barefoot";
+            }
+        }
+            if (daytime.equals("Evening")) {
+                if (deg <= 10 && deg <= 18) {
+                    outfit = "Shirt";
+                    shoes = "Moccasins";
+                } else if ((deg < 18) && (deg <= 24)) {
+                    outfit = "Shirt";
+                    shoes = "Moccasins";
+                } else if (deg < 25) {
+                    outfit = "Shirt";
+                    shoes = "Moccasins";
+                }
+            }
+        }
+    }
+
