@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class zad9 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        String flowerType = scanner.nextLine();
+        int numberOfFlowers = Integer.parseInt( scanner.nextLine() );
+        int budget = Integer.parseInt( scanner.nextLine() );
+        double pricePerPeace = 0;
+
+        if (flowerType.equals( "Roses" )) {
+            if (numberOfFlowers < 80) {
+                pricePerPeace = numberOfFlowers * 5;
+            } else if (numberOfFlowers >= 80) {
+                pricePerPeace = numberOfFlowers * 5 * 0.1;
+
+            }
+        }
+        if (flowerType.equals( "Dahlias" )) {
+            if (numberOfFlowers < 90) {
+                pricePerPeace = numberOfFlowers * 3.8;
+            } else if (numberOfFlowers >= 90) {
+                pricePerPeace = numberOfFlowers * 3.8 * 0.15;
+
+
+            }
+
+        }
+        if (budget > pricePerPeace) {
+            System.out.printf( "Hey, you have a " );
+
+        } else {
+            System.out.printf( "Not enough money" );
+        }
+    }
+}
