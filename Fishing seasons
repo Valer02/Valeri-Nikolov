@@ -1,0 +1,84 @@
+
+public class zad10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int budget = Integer.parseInt(scanner.nextLine());
+        String season = scanner.nextLine();
+        int countFishers = Integer.parseInt(scanner.nextLine());
+
+        double totalPrice = 0;
+
+        if ("Spring".equals(season)) {
+            if (countFishers <= 6) {
+                totalPrice = 3000 * 0.9;
+
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (3000 * 0.9) - 3000*0.05;
+            }
+            if (countFishers >= 7 && countFishers <= 11) {
+                totalPrice = 3000 * 0.85;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (3000 * 0.85) - 3000*0.05;
+            }
+            if (countFishers >= 12) {
+                totalPrice = 3000 * 0.75;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (3000 * 0.75) - 3000*0.05;
+            }
+
+        } else if ("Summer".equals(season)) {
+            if (countFishers <= 6) {
+                totalPrice = 4200 * 0.9;
+
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (4200 * 0.9) - 4200*0.05;
+            }
+            if (countFishers >= 7 && countFishers <= 11) {
+                totalPrice = 4200 * 0.85;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (4200 * 0.85) - 4200*0.05;
+            }
+            if (countFishers >= 12) {
+                totalPrice = 4200 * 0.75;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (4200 * 0.75) - 4200*0.05;
+            }
+
+        } else if ("Autumn".equals(season)) {
+            if (countFishers <= 6) {
+                totalPrice = 4200 * 0.9;
+            } else if (countFishers <= 11) {
+                totalPrice = 4200 * 0.85;
+            } else {
+                totalPrice = 4200 * 0.75;
+            }
+
+        } else if ("Winter".equals(season)) {
+            if (countFishers <= 6) {
+                totalPrice = 2600 * 0.9;
+
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (2600 * 0.9) - 2600*0.05;
+            }
+            if (countFishers >= 7 && countFishers <= 11) {
+                totalPrice = 2600 * 0.85;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (2600 * 0.85) - 2600*0.05;
+            }
+            if (countFishers >= 12) {
+                totalPrice = 2600 * 0.75;
+            } else if (countFishers % 2 == 0) {
+                totalPrice = (2600 * 0.75) - 2600*0.05;
+            }
+        }
+        double diff = 0;
+        if (budget >= totalPrice) {
+            diff = budget - totalPrice;
+            System.out.printf("Yes! You have %.2f BGN left.", diff);
+        } else {
+            diff = totalPrice - budget;
+            System.out.printf("Not enough money! You need %.2f BGN.", diff);
+        }
+    }
+}
