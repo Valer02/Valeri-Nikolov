@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class zad11 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double budget = Double.parseDouble(scanner.nextLine());
+        String seasons = scanner.nextLine().toLowerCase();
+
+        double price = 0;
+        String destinstion = "";
+        String typeOfAccommodation = "";
+
+        if (budget <= 100) {
+            if (seasons.equals("summer")){
+                price = budget * 0.3;
+                typeOfAccommodation = "camp";
+            } else if (seasons.equals("winter")) {
+                price = budget * 0.7;
+                typeOfAccommodation = "hotel";
+            }
+            destinstion = "Bulgaria";
+        } else if (budget <= 1_000) {
+            if (seasons.equals("summer")) {
+                price = budget * 0.4;
+                typeOfAccommodation = "camp";
+            } else if (seasons.equals("winter")){
+                 price = budget * 0.8;
+                 typeOfAccommodation = "hotel";
+            }
+            destinstion = "Balkans";
+        } else if (budget > 1_000){
+            if (seasons.equals("summer") || seasons.equals("winter")){
+                price = budget * 0.9;
+            }
+            destinstion = "Europe";
+
+        }
+        System.out.printf("Somewhere in %s%n", destinstion);
+        System.out.printf("%s - %.2f", typeOfAccommodation, price);
+
+    }
+}
