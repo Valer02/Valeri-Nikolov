@@ -1,0 +1,42 @@
+{
+        Scanner scanner = new Scanner( System.in );
+
+        String month = scanner.nextLine().toLowerCase();
+        double apartment = 0;
+        double studio = 0;
+        double daysOfVacation = Double.parseDouble( scanner.nextLine() );
+
+
+        if ("may".equals( month ) || "october".equals( month )) {
+            if (daysOfVacation <= 7) {
+                apartment = daysOfVacation * 65;
+                studio = daysOfVacation * (50 - ((50 * 5) / 100));
+                System.out.printf( "studio \n" + studio );
+                System.out.printf( "apartment " + apartment );
+            } else if (daysOfVacation > 14) {
+                apartment = daysOfVacation * (65 - ((65 * 10) / 100));
+                studio = daysOfVacation * (50 - ((50 * 30) / 100));
+                System.out.printf( "studio \n" + studio );
+                System.out.printf( "apartment " + apartment );
+
+            }
+        }
+        if ("june".equals( month ) || "september".equals( month )) {
+            if (daysOfVacation >= 14) {
+                apartment = daysOfVacation * (68.7 - ((68.7 * 10) / 100));
+                studio = daysOfVacation * (75.2 - ((75.2 * 30) / 100));
+                System.out.printf( "studio \n" + studio );
+                System.out.printf( "apartment " + apartment );
+
+            }
+        }
+        if ("august".equals( month ) || "january".equals( month )) {
+            if (daysOfVacation > 14) {
+                apartment = daysOfVacation * (77 - ((77 * 10)) / 100);
+                studio = daysOfVacation * (76 - ((76 * 20)) / 100);
+                System.out.printf( "studio \n" + studio );
+                System.out.printf( "apartment  " + apartment );
+            }
+
+        }
+    }
