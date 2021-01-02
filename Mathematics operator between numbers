@@ -1,0 +1,52 @@
+public class zad12 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double n1 = Double.parseDouble(scanner.nextLine());
+        double n2 = Double.parseDouble(scanner.nextLine());
+        String operator = scanner.nextLine();
+
+        switch (operator) {
+            case "+":
+                if ((n1 + n2) % 2 == 0) {
+                    System.out.printf("even");
+                } else {
+                    System.out.printf("odd");
+                }
+                break;
+            case "-":
+                if ((n1 - n2) % 2 == 0) {
+                    System.out.printf("even");
+                } else {
+                    System.out.printf("odd");
+                }
+                break;
+            case "*":
+                if ((n1 * n2) % 2 == 0) {
+                    System.out.printf("even");
+                } else {
+                    System.out.printf("odd");
+                }
+                break;
+            case "/":
+                if (n2 == 0) {
+                    System.out.printf("can not divide by 0");
+                    break;
+                } else {
+                    System.out.printf("%.4f", +n1 / n2);
+                    break;
+                }
+            case "%":
+                if (n2 == 0) {
+                    System.out.printf("can not divide by 0");
+                    break;
+                } else {
+                    System.out.println(((n1 / n2) % 2));
+                    break;
+
+                }
+
+        }
+    }
+}
+
