@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class zad3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+        String text = "progress";
+
+        int length = text.length();
+
+        char symbol = text.charAt( 0 );
+        System.out.println( symbol );
+        char symbol1 = text.charAt( 4 );
+        System.out.println( symbol1 );
+        char symbol2 = text.charAt( 6 );
+        System.out.println( symbol2 );
+
+
+    }
+}
