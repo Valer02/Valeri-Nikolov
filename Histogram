@@ -1,0 +1,52 @@
+import com.sun.security.auth.UnixNumericGroupPrincipal;
+
+import java.util.Scanner;
+
+public class zad4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        double p1 = 0.0;
+        double p2 = 0.0;
+        double p3 = 0.0;
+        double p4 = 0.0;
+        double p5 = 0.0;
+
+        double p1Parcent = 0.0;
+        double p2Parcent = 0.0;
+        double p3Parcent = 0.0;
+        double p4Parcent = 0.0;
+        double p5Parcent = 0.0;
+
+        for (int i = 1; i <= n; i++) {
+
+            double number = Double.parseDouble(scanner.nextLine());
+
+            if (number < 200) {
+                p1++;
+            } else if (number >= 200 && number <= 399) {
+                p2++;
+            } else if (number >= 400 && number <= 599) {
+                p3++;
+            } else if (number >= 600 && number <= 799) {
+                p4++;
+            } else if (number >= 800) {
+                p5++;
+            }
+        }
+        p1Parcent = p1 / n * 100;
+        p2Parcent = p2 / n * 100;
+        p3Parcent = p3 / n * 100;
+        p4Parcent = p4 / n * 100;
+        p5Parcent = p5 / n * 100;
+
+        System.out.printf("%.2f\n", p1Parcent);
+        System.out.printf("%.2f\n", p2Parcent);
+        System.out.printf("%.2f\n", p3Parcent);
+        System.out.printf("%.2f\n", p4Parcent);
+        System.out.printf("%.2f\n", p5Parcent);
+
+    }
+}
