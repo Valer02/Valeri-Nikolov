@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class zad6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String money = scanner.nextLine();
+        double sum = 0;
+
+        while (!money.equals("no more money")){
+            double num = Double.parseDouble(money);
+           if (num<=0){
+               System.out.println("invalid operation ");
+               break;
+           }else {
+               sum += num;
+               System.out.printf("increase: %.2f %n", num);
+               money = scanner.nextLine();
+           }
+            System.out.printf("Total: %.2f" , sum);
+
+        }
+
+    }
+}
