@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.ServiceConfigurationError;
+
+public class zad9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String name = scanner.nextLine();
+        int count = 1;
+        double grade = 0;
+        int excluded = 0;
+
+        while (count <=12 ) {
+            double temp = Double.parseDouble(scanner.nextLine());
+            if (temp < 4.00) {
+                excluded++;
+                if (excluded >= 2){
+                    System.out.printf("%s, has been excluded %d grade", name, count);
+                    break;
+                }
+                count--;
+                continue;
+            }
+            count++;
+            grade +=temp;
+
+        }
+        if (count == 12)
+        System.out.printf("%s, has been excluded %d grade", name, grade/12);
+    }
+}
