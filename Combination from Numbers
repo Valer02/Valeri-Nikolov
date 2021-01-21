@@ -1,0 +1,33 @@
+import javax.security.sasl.SaslClient;
+import java.util.Scanner;
+
+public class zad1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int a = Integer.parseInt(scanner.nextLine());
+        int b = Integer.parseInt(scanner.nextLine());
+        int c = Integer.parseInt(scanner.nextLine());
+        int count = 0;
+        int sum = 0;
+        boolean check = false;
+
+        for (int i = a; i <= b; i++) {
+            for (int j = a; j <= b ; j++) {
+                count ++;
+                sum = i + j;
+                if (sum==c) {
+                    System.out.printf("combination N %d (%d + %d = %d)%n", count, i, j, sum);
+                    check = true;
+                    break;
+                }
+            }
+            if (check ) {
+                break;
+            }
+        }
+        if (!check) {
+            System.out.printf("%d combinations - neither equals %d", count, c);
+        }
+    }
+}
