@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class zad4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        String country = scanner.nextLine();
+        int allSum = 0;
+        boolean check = false;
+
+        while (!country.equals("End")) {
+            int needSumToGo = Integer.parseInt(scanner.nextLine());
+
+            while (needSumToGo > allSum) {
+                String input = scanner.nextLine();
+                if(!input.equals("End")){
+                    int many = Integer.parseInt(input);
+                    allSum += many;
+                    check = true;
+                }else{
+                    check = false;
+                    break;
+                }
+            }
+
+            allSum = 0;
+            if(check){
+                System.out.println("Going to " + country + "!");
+                country = scanner.nextLine();
+            }else {
+                break;
+            }
+        }
+    }
+}
