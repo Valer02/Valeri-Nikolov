@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class zad3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String country = scanner.nextLine();
+        int total = 0;
+
+        while (!country.equals("end")) {
+            int needToGO = Integer.parseInt(scanner.nextLine());
+
+            while (needToGO > total) {
+                int many = Integer.parseInt(scanner.nextLine());
+                total += many;
+            }
+            total = 0;
+            System.out.printf("go to: %s", country);
+            country = scanner.nextLine();
+
+        }
+    }
+}
