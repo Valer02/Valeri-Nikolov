@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class zad3 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        double numberOfPeople = Double.parseDouble( scanner.nextLine() );
+        String typeOfPeople = scanner.nextLine().toLowerCase();
+        String weekendDay = scanner.nextLine().toLowerCase();
+        double price = 0;
+        double totalPrice = 0;
+        double discount = 0;
+
+
+        if ("students".equals( typeOfPeople )) {
+            if ("friday".equals( weekendDay )) {
+                price = 8.45;
+            } else if ("saturday".equals( weekendDay )) {
+                price = 9.80;
+            } else if ("sunday".equals( weekendDay )) {
+                price = 9.80;
+            }
+        } else if ("business".equals( typeOfPeople )) {
+            if ("friday".equals( weekendDay )) {
+                price = 10.9;
+            } else if ("saturday".equals( weekendDay )) {
+                price = 15.60;
+            } else if ("sunday".equals( weekendDay )) {
+                price = 16;
+            }
+        } else if ("regular".equals( typeOfPeople )) {
+            if ("friday".equals( weekendDay )) {
+                price = 15;
+            } else if ("saturday".equals( weekendDay )) {
+                price = 20;
+            } else if ("sunday".equals( weekendDay )) {
+                price = 22.50;
+            }
+        }
+
+        if (typeOfPeople == "students" && numberOfPeople >= 30) {
+            discount = 0.15;
+        } else if (typeOfPeople == "business" && numberOfPeople >= 100) {
+            numberOfPeople -= 10;
+        } else if (typeOfPeople == "regular" && numberOfPeople >= 10 && numberOfPeople <= 20) {
+            discount = 0.05;
+
+        }
+        totalPrice = numberOfPeople * price;
+        totalPrice = totalPrice - (totalPrice * discount);
+        System.out.printf( "Total price: %.2f", totalPrice );
+
+    }
+}
