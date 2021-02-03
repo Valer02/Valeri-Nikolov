@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class zad9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        double budget = Double.parseDouble( scanner.nextLine() );
+        int padawansCnt = Integer.parseInt( scanner.nextLine() );
+        double pricePerLightsaber = Double.parseDouble( scanner.nextLine() );
+        double pricePerRobe = Double.parseDouble( scanner.nextLine() );
+        double pricePerBelt = Double.parseDouble( scanner.nextLine() );
+
+        double lightsaberssTotalPrice = Math.ceil( padawansCnt * 1.1 ) * pricePerLightsaber;
+        double robesTotalPrice = padawansCnt * pricePerRobe;
+        int freeBelts = padawansCnt / 6;
+        double beltsTotalPrice = (padawansCnt - freeBelts) * pricePerBelt;
+
+        double finalSum = lightsaberssTotalPrice + robesTotalPrice + beltsTotalPrice;
+
+        if (finalSum >= budget) {
+            double moneyNeed = finalSum - budget;
+            System.out.println( String.format( "Ivan Cho will need %.2flv more.", moneyNeed ) );
+        } else {
+            System.out.println( String.format( "The money is enough - it would cost %.2flv.", finalSum ) );
+        }
+
+
+    }
+}
