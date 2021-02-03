@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class zad10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+//        int game = Integer.parseInt( scanner.nextLine() );
+////        double headSetPrice = Double.parseDouble( scanner.nextLine());
+////        double mousePrice = Double.parseDouble( scanner.nextLine() );
+////        double keyboardPrice = Double.parseDouble( scanner.nextLine());
+////        double displayPrice = Double.parseDouble( scanner.nextLine());
+////
+////        double headSetCost = (game / 2  )* headSetPrice;
+////        double mouseCost = (game / 3  )* mousePrice;
+////        double keyboardCost = (game / 6  )* keyboardPrice;
+////        double displayCost = (game / 12  )* displayPrice;
+////
+////        double totalCost = headSetCost + mouseCost + keyboardCost + displayCost;
+////
+////        System.out.printf("Rage Expence: %.2f", totalCost);
+////
+////    }
+////}
+
+        int game = Integer.parseInt( scanner.nextLine() );
+        double headSetPrice = Double.parseDouble( scanner.nextLine() );
+        double mousePrice = Double.parseDouble( scanner.nextLine() );
+        double keyboardPrice = Double.parseDouble( scanner.nextLine() );
+        double displayPrice = Double.parseDouble( scanner.nextLine() );
+
+        double totalCost = 0;
+
+        for (int i = 1; i <= game; i++) {
+            if (i % 2 == 0) {
+                totalCost += headSetPrice;
+            }
+            if (i % 3 == 0) {
+                totalCost += mousePrice;
+            }
+            if (i % 6 == 0) {
+                totalCost += keyboardPrice; // 6 e за щото трябва да се дели и на 2 и на 3
+            }
+            if (i % 12 == 0) {
+                totalCost += displayPrice;
+            }
+
+        }
+        System.out.printf( "Rage Expence: %.2f", totalCost );
+
+    }
+
+
+}
