@@ -1,0 +1,14 @@
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class zad2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        BigDecimal num = new BigDecimal( 0 );
+        BigDecimal num1 = new BigDecimal( 0 );
+        num = num.add(num1 );
+        
+    }
+
+}
