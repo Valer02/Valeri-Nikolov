@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class zad3 {
+
+//8 Exercise
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+//3.	Elevator 
+
+//Calculate how many courses will be needed to elevate n persons by using an elevator with capacity of p persons.
+//The input holds two lines: the number of people n and the capacity p of the elevator.
+
+        int n = Integer.parseInt( scanner.nextLine() );
+        int p = Integer.parseInt( scanner.nextLine() );
+
+        int cources = n/p;
+        int rest = n%p;
+
+        if (rest ==0 ) {
+            System.out.println(cources);
+        }else if (rest != 0){
+            System.out.println(cources + rest/rest);
+        }
+
+
+    }
+}
