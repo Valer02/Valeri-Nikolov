@@ -1,0 +1,20 @@
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class zad5 {
+    public static void main(String[] args) {
+        //5.	Print Part of the ASCII Table
+        //Find online more information about ASCII (American Standard Code for Information Interchange) and write a program that prints part of the ASCII table of characters at the console.
+        //On the first line of input you will receive the char index you should start with and on the
+        //second line - the index of the last character you should print.
+
+        Scanner scanner = new Scanner( System.in );
+
+        int firstNumber = Integer.parseInt( scanner.nextLine() );
+        int secondNumber = Integer.parseInt( scanner.nextLine() );
+        int number = 0;
+
+        for (int i = firstNumber; i <= secondNumber ; i++)
+                System.out.println(" The ASCII value of " + (char)i + "  =  " + i);
+    }
+}
