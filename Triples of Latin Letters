@@ -1,0 +1,25 @@
+import java.nio.BufferUnderflowException;
+import java.util.Scanner;
+
+public class zad6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+//6.	Triples of Latin Letters
+//Write a program to read an integer n and print all triples of the first n small Latin letters, ordered alphabetically:
+
+        {
+            int n = Integer.parseInt(scanner.nextLine());
+
+            for(char a = 'a'; a<'a'+ n; a++)
+            {
+                for (char b = 'a'; b < 'a' + n; b++)
+                {
+                    for (char c = 'a'; c < 'a' + n; c++)
+                    {
+                        System.out.printf("%s %s %s \n", a, b, c);
+                    }
+                 }
+            }
+        }
+    }
+}
