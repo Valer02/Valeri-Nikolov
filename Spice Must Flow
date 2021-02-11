@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class zad9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner( System.in );
+
+        //9. Spice Must Flow 
+        //Spice is Love, Spice is Life. 
+        // And most importantly, Spice must flow. 
+        // It must be extracted from the scorching sands of Arrakis, 
+        // under constant threat of giant sand worms. To make the work as efficient as possible, 
+        // the Duke has tasked you with the creation of a management software. 
+        
+        int startingYield=Integer.parseInt(scanner.nextLine());
+        int amount=0;
+        int days=0;
+
+        while (startingYield>0){
+            if (startingYield<100){
+                if (amount<26){
+                    break;
+                }
+                amount-=26;
+                break;
+            }
+            amount+=startingYield-26;
+            startingYield-=10;
+
+            days++;
+        }
+        System.out.println(days);
+        System.out.println(amount);
+
+    }
+}
