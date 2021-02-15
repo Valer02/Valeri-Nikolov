@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class zad1 {
+    public static void main(String[] args) {
+
+    //Train 10_1Lab
+        //You will be given a count of wagons in a train n. On the next n lines,
+        // you will receive how many people are going to get on that wagon.
+        // At the end print the whole train and after that the sum of the people in the train.
+
+        Scanner scanner = new Scanner( System.in );
+
+        int countOfVagoon = Integer.parseInt( scanner.nextLine() );
+
+        int[] peopleInVagoon = new int[countOfVagoon];
+        int sum = 0;
+
+        for (int i = 0; i < countOfVagoon; i++) {
+            peopleInVagoon[i] = Integer.parseInt( scanner.nextLine() );
+            sum += peopleInVagoon[i];
+        }
+
+        for (int i = 0; i < peopleInVagoon.length; i++) {
+            System.out.print( peopleInVagoon[i] + ", " );
+        }
+        System.out.printf("\n"+ sum);
+    }
+}
